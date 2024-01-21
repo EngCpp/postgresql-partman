@@ -15,9 +15,9 @@ To do that we run ./build.sh script
 ## Running Postgresql Sharding
 The only concern to run this demo is to make sure posrgresql is not running already on your host machine, as the master runs on port 5432 it may collide with an existing running instance.
 
-| Servers     | Port  | Table          |
-| ------------| ------|----------------|
-| pg_master   | 5432  | customers      |
+| Servers | Port  | Table      |
+| --------| ------|------------|
+| pg_db   | 5432  | customers  |
 
 
 :woman_dancing:
