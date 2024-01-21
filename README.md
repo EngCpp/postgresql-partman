@@ -42,7 +42,7 @@ docker-compose down -v
 - SELECT * FROM cron.job ORDER BY jobid ASC (to check the job scheduled)
 - SELECT * FROM cron.job_run_details ORDER BY runid ASC (to check if the job has run successfuly)
 - SELECT * FROM public.customers (To check the data inserted by default)
-<img src="readme-imgs/customers"/>
+<img src="readme-imgs/customers.png"/>
 
 
 ### go into the public table and check the partitions available:
