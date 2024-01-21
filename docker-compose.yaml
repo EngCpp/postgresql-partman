@@ -1,0 +1,21 @@
+version: "3"
+services:
+  pg_db:
+    image: postgres_partman_cron:16
+    hostname: pg_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_db:/var/lib/postgresql/data
+      - ./scripts/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh     
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command: >
+      postgres -c shared_preload_libraries='pg_cron' -c cron.database_name='${POSTGRES_DB:-postgres}'
+      
+volumes:
+  pg_db:
+    driver: local
