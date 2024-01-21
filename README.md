@@ -38,15 +38,13 @@ docker-compose down -v
 1 - Connect you pgAdmin to the instance:
 <img src="readme-imgs/connection.png"/>
 
-3 - run sql statemet to check the master:
-### pg_db:
+3 - run sql statemet to check the pg_db:
 - SELECT * FROM cron.job ORDER BY jobid ASC (to check the job scheduled)
 - SELECT * FROM cron.job_run_details ORDER BY runid ASC (to check if the job has run successfuly)
 - SELECT * FROM public.customers (To check the data inserted by default)
+<img src="readme-imgs/customers"/>
 
 
-
-4 - run sql on the nodes to check if the data is distributed:
 ### go into the public table and check the partitions available:
 <img src="readme-imgs/partitions.png"/>
 
