@@ -12,7 +12,7 @@ To do that we run ./build.sh script
 <img src="readme-imgs/build.png"/>
 
 
-## Running Postgresql Sharding
+## Running Postgresql On Demand Creating of Partitions
 The only concern to run this demo is to make sure posrgresql is not running already on your host machine, as the master runs on port 5432 it may collide with an existing running instance.
 
 | Servers | Port  | Table      |
