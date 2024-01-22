@@ -1,5 +1,5 @@
 # Postgresql partman
-PostgreSQL Partman Example, demonstrates how to create partitions on demadand for a postgreSql table
+PostgreSQL Partman Example, demonstrates how to create partitions on demand for a postgreSql tables
 This is using 100% PostgreSQL technology, and I use docker and docker-compose just to simulate the server
 
 
