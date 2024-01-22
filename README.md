@@ -59,10 +59,11 @@ Wait for 1 minute .. and check if the script has run ..
 
 <img src="readme-imgs/scripit-has-run.png"/>
 
-### Check the new partitions recentrly created:
+### Check the new partitions recently created:
 <img src="readme-imgs/confirm-partitions.png"/>
 
 and check if the data is there
 
 <img src="readme-imgs/confirm-data.png"/>
 
+The Default partition should be empty by now, as the datas was migrated to proper partitions
