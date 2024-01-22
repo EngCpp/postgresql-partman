@@ -35,13 +35,13 @@ SELECT partman.create_parent(
 
 UPDATE partman.part_config
 SET infinite_time_partitions = true,  -- permit creation of partitions without limits
-    retention = '5 years',  	      -- keep partitions for 5 years
+    retention = '2 years',  	      -- keep partitions for 5 years
     retention_keep_table=true 	      -- When the retention period is due, the table isn't deleted. Instead, partitions are only detached from the parent table.
-WHERE parent_table = 'data_mart.events';
+WHERE parent_table = 'public.customers';
 
 
 -- schedule it to run run_maintenance_proc every minute
--- SELECT cron.schedule('* * * * *', 'CALL partman.run_maintenance_proc()');
+SELECT cron.schedule('*/10 * * * *', 'CALL partman.run_maintenance_proc()');
 
 --*************************************************************************************************
 
